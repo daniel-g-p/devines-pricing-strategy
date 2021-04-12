@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeVines Pricing Guide</title>
+    <link rel="stylesheet" href="app.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1>DeVines Pricing Guide</h1>
+    <section id="step1">
+        <h2>Find out what Offer suits your Needs</h2>
+        <form action="">
+            <h3>1. Choose the Services that you are interested in</h3>
+            <div class="chooseServices">
+                <input type="checkbox" name="missingVineDetection" id="missingVineDetection" value="1">
+                <label for="missingVineDetection">
+                    <div class="chooseService">
+                        <img src="assets/missing.svg" alt="Missing Vine Detection">
+                        <p>Missing Vine Detection</p>
+                    </div>
+                </label>
+                <input type="checkbox" name="yieldAndGrowthTracking" id="yieldAndGrowthTracking" value="1">
+                <label for="yieldAndGrowthTracking">
+                    <div class="chooseService">
+                        <img src="assets/yield.svg" alt="Yield and Growth Tracking">
+                        <p>Yield and Growth Tracking</p>
+                    </div>
+                </label>
+                <input type="checkbox" name="workforceManagement" id="workforceManagement" value="1">
+                <label for="workforceManagement">
+                    <div class="chooseService">
+                        <img src="assets/workforce.svg" alt="Workforce Management">
+                        <p>Workforce Management</p>
+                    </div>
+                </label>
+            </div>
+            <h3>2. Specify the Details of your Vineyard</h3>
+            <div class="specifyDetails">
+                <div class="formField">
+                    <label for="vineyardArea">Vineyard Area in Hectares:</label>
+                    <input type="number" name="vineyardArea" id="vineyardArea" required>
+                </div>
+                <div class="formField">
+                    <label for="maxEmployees">Employees during Harvest Season:</label>
+                    <input type="number" name="maxEmployees" id="maxEmployees" required>
+                </div>
+                <div class="formField">
+                    <label for="minEmployees">Employees during the Offseason:</label>
+                    <input type="number" name="minEmployees" id="minEmployees" required>
+                </div>
+                <div class="formField">
+                    <label for="vehicles">Number of Vehicles:</label>
+                    <input type="number" name="vehicles" id="vehicles" required>
+                </div>
+                <div class="formField">
+                    <label for="vehicleDrivers">Number of Vehicle Drivers:</label>
+                    <input type="number" name="vehicleDrivers" id="vehicleDrivers" required>
+                </div>
+                <div class="formField">
+                    <label for="grapeVariety">Dark Grapes as a Proportion of total Production:</label>
+                    <input type="number" name="vineTypeDistribution" id="grapeVariety" min="0" max="100" required>
+                </div>
+                <div class="formField">
+                    <span>Vineyard Type:</span>
+                    <input type="radio" name="vineyardType" id="regular" value="0">
+                    <label for="regular">Regular</label>
+                    <input type="radio" name="vineyardType" id="bio" value="0.5">
+                    <label for="bio">Bio</label>
+                    <input type="radio" name="vineyardType" id="biodynamic" value="1" required>
+                    <label for="biodynamic">Biodynamic</label>
+                </div>
+            </div>
+            <button>Calculate my Offer</button>
+        </form>
+    </section>
+    <section id="step2">
+        <h2>Optimize your recommended Offer</h2>
+        <div class="offer">
+            <div class="slider">
+                <label for="receivers">eHermes Receivers: <span id="receiverCount">0</span></label>
+                <input type="range" name="receivers" id="receivers" min="0" max="10" value="0">
+            </div>
+            <div class="slider">
+                <label for="storage">Cloud Database Storage: <span id="storageCount">0GB</span></label>
+                <input type="range" name="storage" id="storage" min="0" max="50" value="0">
+            </div>
+            <div class="container">
+                <div class="chosenOptions">
+                    <div id="serviceMV" class="chosenOption">
+                        <img src="assets/check.svg" alt="Included">
+                        <span>Missing Vine Detection</span>
+                    </div>
+                    <div id="serviceYG" class="chosenOption">
+                        <img src="assets/check.svg" alt="Included">
+                        <span>Yield and Growth Tracking</span>
+                    </div>
+                    <div id="serviceWM" class="chosenOption">
+                        <img src="assets/check.svg" alt="Included">
+                        <span>Workforce Management</span>
+                    </div>
+                </div>
+                <div class="price">
+                    <h4>€0</h4>
+                    <p>per Month</p>
+                    <button>Place Order</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="faqs">
+        <h2>More Information</h2>
+        <div class="allFAQs">
+            <div class="faq">
+                <h5>Subscription Term</h5>
+                <p style="max-height: 0;">Subscription should run on a year-by-year basis, but billing should occur monthly.</p>
+            </div>
+            <div class="faq">
+                <h5>Plan Upgrades</h5>
+                <p style="max-height: 0;">Customers should be free to upgrade their plan midway through a subscription term if they wish to do so. Such upgrades shall come at the usual price and shall be charged on a pro-rata basis for the remainder of the term.</p>
+            </div>
+            <div class="faq">
+                <h5>Warranty & Insurance</h5>
+                <p style="max-height: 0;">We should give customers an option to purchase both a warranty and/or an insurance for a yearly premium.</p>
+            </div>
+            <div class="faq">
+                <h5>Product Testing</h5>
+                <p style="max-height: 0;">New customers should be eligible for a 3-month testing phase, during which they will be able to test DeVines with 1 receiver and 5GB of cloud storage for a total of €1500.</p>
+            </div>
+            <div class="faq">
+                <h5>Maintenance and Repairs</h5>
+                <p style="max-height: 0;">Customers shall always receive all software updates and should be granted one hardware revision every year.</p>
+            </div>
+            <div class="faq">
+                <h5>Price Strategy</h5>
+                <p style="max-height: 0;">We should launch DeVines with a price skimming approach, starting at a fairly high price to optimize the technology with few customers. Further down the line, as production efficiency and possibly economies of scale increase, we could
+                    lower the price to target a larger segment and internationalize the service.</p>
+            </div>
+            <div class="faq">
+                <h5>Promotional Strategy</h5>
+                <p style="max-height: 0;">Firstly, we should launch an afiliate program for DeVines as viticulture is a very community-driven industry. Secondly, we should incentivize immediate orders with promotional offers, for example offering a discount code valid for one
+                    month once a potential customer completes the pricing guide for the first time. And lastly, we should keep doing individual consultation the way we are doing it now as we offer a high-ticket service.</p>
+            </div>
+            <div class="faq">
+                <h5>Distribution Strategy</h5>
+                <p style="max-height: 0;">We should exclusively sell DeVines through our website. For that, we need to implement eCommerce functionality into the website as soon as possible.</p>
+            </div>
+        </div>
+    </section>
+    <script src="app.js"></script>
+</body>
+
+</html>
